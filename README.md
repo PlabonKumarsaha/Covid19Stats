@@ -1,0 +1,17 @@
+# Covid19Tracker
+
+## An Android app that 
+
+* keeps track of the total infected,total death,total recovered , new death ,new recovered,new infected
+* Shows the details by country name
+* Accend and decend by country name
+
+## Required Dependencies : 
+
+1. Bottomnavigation View ,card view - Android material design -https://material.io/develop/android/docs/getting-started/
+2.Recyler View -https://developer.android.com/jetpack/androidx/releases/recyclerview
+3.Volly Library -https://developer.android.com/training/volley
+4.GSON for JSON parsing
+
+[Data source]{https://api.covid19api.com/summary}
+
