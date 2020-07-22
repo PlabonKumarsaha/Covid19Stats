@@ -20,6 +20,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONObject;
+
 public class HomeFragment extends Fragment {
 
     private static final String STATS_URL = "https://api.covid19api.com/summary";
@@ -27,7 +29,7 @@ public class HomeFragment extends Fragment {
     Context context;
     //UI views
     ProgressBar progressBar;
-    TextView totalcasesTV,newcasesTV,totalDeathTV,newDeathTV,totalRecoveredTV;
+    TextView totalcasesTV,newcasesTV,totalDeathTV,newDeathTV,totalRecoveredTV,newRecoveredTV;
 
 
     public HomeFragment() {
@@ -51,7 +53,11 @@ public class HomeFragment extends Fragment {
         newcasesTV = view.findViewById(R.id.newcasesTV);
         totalDeathTV = view.findViewById(R.id.totalDeathTV);
         newDeathTV = view.findViewById(R.id.newDeathTV);
+        newRecoveredTV = view.findViewById(R.id.newRecoveredTV);
         totalRecoveredTV = view.findViewById(R.id.totalRecoveredTV);
+        progressBar.setVisibility(View.GONE);
+
+        loadHomeData();
         // Inflate the layout for this fragment
         return view;
     }
@@ -85,6 +91,27 @@ public class HomeFragment extends Fragment {
         try{
 
             //we know that our data is in JSON format ,so we change it to object
+            JSONObject jsonObject = new JSONObject(response);
+            JSONObject globalJO =  jsonObject.getJSONObject("Global");
+            //get data from it
+            String NewConfirmed= globalJO.getString("NewConfirmed");
+            String TotalConfirmed= globalJO.getString("TotalConfirmed");
+            String NewDeaths= globalJO.getString("NewDeaths");
+            String TotalDeaths= globalJO.getString("TotalDeaths");
+            String NewRecovered= globalJO.getString("NewRecovered");
+            String TotalRecovered= globalJO.getString("TotalRecovered");
+
+            //set the data here
+
+            totalcasesTV.setText(TotalConfirmed);
+            newcasesTV.setText(NewConfirmed);
+            totalDeathTV.setText(TotalDeaths);
+            newDeathTV.setText(NewDeaths);
+            newRecoveredTV.setText(NewRecovered);
+            totalRecoveredTV.setText(TotalRecovered);
+
+           //hide progressbar
+            progressBar.setVisibility(View.GONE);
         } catch (Exception e){
             progressBar.setVisibility(View.GONE);
             Toast.makeText(context,""+e.getMessage(),Toast.LENGTH_SHORT).show();
