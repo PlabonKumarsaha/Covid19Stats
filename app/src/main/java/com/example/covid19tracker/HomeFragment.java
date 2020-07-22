@@ -61,6 +61,13 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadHomeData();
+    }
+
     private void loadHomeData(){
         //show progress
         progressBar.setVisibility(View.VISIBLE);

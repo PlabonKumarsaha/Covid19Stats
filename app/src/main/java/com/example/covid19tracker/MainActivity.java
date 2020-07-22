@@ -39,16 +39,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         refreshBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                homeFragment.onResume();
             }
         });
 
         navigationView.setOnNavigationItemSelectedListener(this);
 
-
     }
 
-//this will be initialized when the app starts. When the app starts , home fragment is the first fragment that will start the whole app
+   //this will be initialized when the app starts. When the app starts , home fragment is the first fragment that will start the whole app
     private void initFragmentManager() {
     HomeFragment homeFragment = new HomeFragment();
     StatasticsFragment statasticsFragment = new StatasticsFragment();
@@ -86,14 +85,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         //handles bottom navigation item clicks
         switch(item.getItemId()){
-
             case R.id.navigation_home :
                 loadHomeFragment();
                  return true;
             case R.id.navigation_stats :
                 loadStatasticsFragment();
                 return true;
-
         }
         return false;
     }
