@@ -19,6 +19,7 @@ public class AdapterStat extends RecyclerView.Adapter<AdapterStat.HoldStat> impl
 
     private Context context;
     public ArrayList<ModelStat>startArrayList,filterList;
+    
     private FilterStat filterStat;
 
     public AdapterStat(Context context, ArrayList<ModelStat> startArrayList) {
