@@ -195,9 +195,9 @@
         <TextView
             android:id="@+id/newRecoveredTV"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text=" -"
+            android:text="-"
             android:textSize="16dp"
             android:textColor="#151212"
             android:textAlignment="textEnd"
@@ -232,7 +232,7 @@
         <TextView
             android:id="@+id/totalRecoveredTV"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text=" -"
             android:textSize="16dp"

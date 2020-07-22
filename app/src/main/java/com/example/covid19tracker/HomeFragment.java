@@ -100,6 +100,7 @@ public class HomeFragment extends Fragment {
             String TotalDeaths= globalJO.getString("TotalDeaths");
             String NewRecovered= globalJO.getString("NewRecovered");
             String TotalRecovered= globalJO.getString("TotalRecovered");
+            //Toast.makeText(context,TotalRecovered,Toast.LENGTH_SHORT).show();
 
             //set the data here
 

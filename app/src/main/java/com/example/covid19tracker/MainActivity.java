@@ -57,14 +57,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     activeFragment = homeFragment;
 
     //initilaizing with this fragment
-    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    fragmentTransaction.add(R.id.frame,homeFragment,"Home_Fragment").commit();
+     fragmentManager.beginTransaction().
+            add(R.id.frame,homeFragment,"Home_Fragment")
+             .commit();
 
     //keeping another fragment hidden!
-    fragmentTransaction.add(R.id.frame,statasticsFragment,"Statastics_fragment")
-    .hide(statasticsFragment).commit();
+    fragmentManager.beginTransaction()
+            .add(R.id.frame,statasticsFragment,"Statastics_fragment").hide(statasticsFragment)
+            .commit();
     //commit the transaction
-        fragmentTransaction.commit();
+       // fragmentTransaction.commit();
     }
 
     private void loadHomeFragment(){
