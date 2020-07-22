@@ -5,6 +5,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,10 +15,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class AdapterStat extends RecyclerView.Adapter<AdapterStat.HoldStat> {
+public class AdapterStat extends RecyclerView.Adapter<AdapterStat.HoldStat> implements Filterable {
 
     private Context context;
-    private ArrayList<ModelStat>startArrayList;
+    public ArrayList<ModelStat>startArrayList,filterList;
+    private FilterStat filterStat;
 
     public AdapterStat(Context context, ArrayList<ModelStat> startArrayList) {
         this.context = context;
@@ -56,6 +59,14 @@ public class AdapterStat extends RecyclerView.Adapter<AdapterStat.HoldStat> {
     @Override
     public int getItemCount() {
         return startArrayList.size();
+    }
+
+    @Override
+    public Filter getFilter() {
+        if(filterStat == null){
+            filterStat = new FilterStat(this,filterList);
+        }
+        return filterStat;
     }
 
 
