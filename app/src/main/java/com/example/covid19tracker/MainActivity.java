@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
    //this will be initialized when the app starts. When the app starts , home fragment is the first fragment that will start the whole app
     private void initFragmentManager() {
-    HomeFragment homeFragment = new HomeFragment();
-    StatasticsFragment statasticsFragment = new StatasticsFragment();
+     homeFragment = new HomeFragment();
+     statFragment = new StatasticsFragment();
 
     fragmentManager = getSupportFragmentManager();
     activeFragment = homeFragment;
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     //keeping another fragment hidden!
     fragmentManager.beginTransaction()
-            .add(R.id.frame,statasticsFragment,"Statastics_fragment").hide(statasticsFragment)
+            .add(R.id.frame,statFragment,"Statastics_fragment").hide(statFragment)
             .commit();
     //commit the transaction
        // fragmentTransaction.commit();
