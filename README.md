@@ -6,7 +6,7 @@
 * Shows the details by country name
 * Accend and decend by country name
 
-## Screenshots
+## App Screenshots
 
 ### Home tab
 ![Home tab](https://github.com/PlabonKumarsaha/Covid19Tracker/blob/master/img/115822367_770355600404063_7032126148418135679_n.jpg)
