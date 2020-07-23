@@ -7,11 +7,17 @@
 * Accend and decend by country name
 
 ## Screenshots
+
+### Home tab
 ![Home tab](https://github.com/PlabonKumarsaha/Covid19Tracker/blob/master/img/115822367_770355600404063_7032126148418135679_n.jpg)
+<br><br>
 
-
+### Statastics Tab
+<br><br>
 ![Statastics Tab](https://github.com/PlabonKumarsaha/Covid19Tracker/blob/master/img/115912435_1026119047807537_1200504976755290649_n.jpg)
 
+### Accencing Decending sort and search from Tab stat(Decending sort is done in the image)
+<br><br>
 ![Decending sort and search from Tab stat](https://github.com/PlabonKumarsaha/Covid19Tracker/blob/master/img/109316744_404463703846197_7591293020354454844_n.jpg)
 
 
