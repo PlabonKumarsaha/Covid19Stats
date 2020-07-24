@@ -1,4 +1,4 @@
-# Covid19Tracker
+# Covid19 Stat shower for Android smart phone
 
 ## An Android app that 
 
