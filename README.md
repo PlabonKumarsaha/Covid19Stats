@@ -6,6 +6,8 @@
 * Shows the details by country name
 * Accend and decend by country name
 
+##  [USed Dataset->Click here for data couce link](https://api.covid19api.com/summary)
+
 ## App Screenshots
 
 ### Home tab
@@ -37,6 +39,6 @@
 3. [Volly Library](https://developer.android.com/training/volley) <br>
 4. GSON for JSON parsing
 
-##  [Click here for data couce link](https://api.covid19api.com/summary)
+
 
 
