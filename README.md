@@ -3,8 +3,8 @@
 ## An Android app that 
 
 * keeps track of the total infected,total death,total recovered , new death ,new recovered,new infected
-* Shows the details by country name
-* sort Accend and decend by country name
+* Shows the details by country name.
+* sort Accend and decend by country name.
 
 ##  [USed Dataset->Click here for data couce link](https://api.covid19api.com/summary)
 
